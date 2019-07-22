@@ -1,0 +1,19 @@
+<ehcache>
+        <diskStorepath="java.io.tmpdir/cache"></diskStorepath>
+        <defaultCache4ImaxElementsInMemory＝"10000"
+            eternal="false"
+            timeToidleSeconds="120"
+            timeToLiveSeconds="120"
+            overflowToDisk="false"
+            diskPersistent="false"
+            diskExpiryThreadintervalSeconds="120"></defaultCache4ImaxElementsInMemory>
+
+    <cachename="bookcache"
+        maxElementsinMemory="10000"
+        eternal="true"
+        timeToidleSeconds="120"
+        timeToLiveSeconds="120"
+        overflowToDisk="true"
+        diskPersistent="true"
+        diskExpiryThreadintervalSeconds="600"></cachename>
+        </ehcache>
