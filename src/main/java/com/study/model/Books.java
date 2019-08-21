@@ -1,5 +1,8 @@
 package com.study.model;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Books {
     private String name;
     private String auth;
@@ -20,12 +23,15 @@ public class Books {
         this.auth = auth;
     }
 
-    @Override
-    public String toString() {
-        return "Books{" +
-                "name='" + name + '\'' +
-                ", auth='" + auth + '\'' +
-                '}';
+    public Books(String name, String auth) {
+        this.name = name;
+        this.auth = auth;
     }
 
+    @Override
+    public String toString() {
+        return "{" + "'name'" + ":'"+name + '\'' +
+                ", 'auth'" +":'" + auth + '\'' +
+                "}";
+    }
 }

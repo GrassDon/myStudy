@@ -1,5 +1,6 @@
 package com.study.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.study.model.Books;
 import com.study.service.myService;
 import org.slf4j.Logger;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
-@RestController    //代替responsebody和controller注解
+@RestController    //代替responsebody和controller注解,返回json数据
 public class HelloController {
 
     @Autowired
@@ -26,14 +27,21 @@ public class HelloController {
     public Books books()
     {
         logger.info("进入books的controller");
-        Books book = new Books();
-        book.setAuth("dong");
-        book.setName("124");
+        Books book = new Books("dong","1234");
         System.out.println("controller回显");
+        System.out.println(book.toString());
         return book;
     }
-    @GetMapping("getuser")
+    @GetMapping("/getuser")
     public String getUser(Integer id){
         return myService.getUser(id);
+    }
+
+    @GetMapping("/jsonbook")
+    public JSONObject jsonbook()
+    {
+        logger.info("进入jsonbook方法。。。");
+        Books books = new Books("lin","1235");
+        return JSONObject.parseObject(books.toString());
     }
 }

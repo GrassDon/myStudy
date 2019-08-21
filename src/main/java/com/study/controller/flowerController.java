@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -28,15 +30,15 @@ public class flowerController {
         System.out.println("当前页记录数："+page.getNumberOfElements());
         System.out.println("每页记录数："+page.getSize());
     }
-    @GetMapping("/saveFlower")
-    public void saveFlower(){
+    @PostMapping("/saveFlower")
+    public void saveFlower(@RequestBody flowers flower){
         flowers flowers = new flowers();
         System.out.println("start!!!");
-        flowers.setId(00000000000);
-        flowers.setName("百合");
-        flowers.setNum(10);
-        flowers.setOwner("dong");
-        flowers.setPrice(12.23f);
+        flowers.setId(flower.getId());
+        flowers.setName(flower.getName());
+        flowers.setNum(flower.getNum());
+        flowers.setOwner(flower.getOwner());
+        flowers.setPrice(flower.getPrice());
         System.out.println(flowers.toString());
         this.flowersService.addFlower(flowers);
     }
