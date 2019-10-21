@@ -1,6 +1,5 @@
 package com.study.strategyPattern;
 
-import org.apache.ibatis.annotations.Mapper;
 
 /**
  * <p>

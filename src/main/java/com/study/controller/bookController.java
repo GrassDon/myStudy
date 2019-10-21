@@ -1,5 +1,6 @@
 package com.study.controller;
 
+import com.study.annotation.myfirstAnnotation;
 import com.study.model.Books;
 import com.study.service.bookService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +18,9 @@ public class bookController {
     bookService bookService;
 
     //查询所有books
+    @myfirstAnnotation(descri = "这里是个测试注解，233")
     @GetMapping("/allBook")
-    public List<Books> getAllBookController(@RequestBody Books books)
+    public List<Books> getAllBookController()
     {
         System.out.println("......");
         return bookService.selectAll();

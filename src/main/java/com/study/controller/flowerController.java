@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -31,7 +32,7 @@ public class flowerController {
         System.out.println("每页记录数："+page.getSize());
     }
     @PostMapping("/saveFlower")
-    public void saveFlower(@RequestBody flowers flower){
+    public void saveFlower(@Valid @RequestBody flowers flower){
         flowers flowers = new flowers();
         System.out.println("start!!!");
         flowers.setId(flower.getId());

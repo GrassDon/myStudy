@@ -1,6 +1,7 @@
 package com.study.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 /*
 entity注解表明这是一个实体类，在项目启动的时候，会
@@ -17,6 +18,8 @@ public class flowers {
     @Column(name = "flower_name",nullable = false)
     private String name;
     private Integer num;
+    //该注解可以自动校验前台传来的某些字段，不可以为空，如果空，则报错
+    @NotBlank
     private String owner;
     private Float price;
     //transient注解表示该属性被忽略，在表中不生成对应字段

@@ -1,6 +1,11 @@
 package com.study.model;
 
+
+import javax.validation.constraints.NotBlank;
+
 public class Human {
+
+    @NotBlank
     private String name;
 
     public String getName() {

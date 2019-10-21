@@ -5,7 +5,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class myService {
     public String getUser(int id){
-        System.out.println("setuser");
+        if(id==1){
+            return "dong";
+        }
         return "user";
     }
     public void deleteUser(int id){

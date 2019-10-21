@@ -1,6 +1,7 @@
 package com.study.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.study.annotation.myfirstAnnotation;
 import com.study.model.Books;
 import com.study.service.myService;
 import org.slf4j.Logger;
@@ -33,11 +34,13 @@ public class HelloController {
         return book;
     }
     @GetMapping("/getuser")
+    @myfirstAnnotation
     public String getUser(Integer id){
         return myService.getUser(id);
     }
 
     @GetMapping("/jsonbook")
+    @myfirstAnnotation
     public JSONObject jsonbook()
     {
         logger.info("进入jsonbook方法。。。");
