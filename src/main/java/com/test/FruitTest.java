@@ -3,17 +3,14 @@ package com.test;
 import com.study.Interface.AppleInterface;
 import com.study.Interface.impl.IAppleInterface;
 import com.study.model.Apple;
-import org.apache.naming.java.javaURLContextFactory;
-
-import java.util.Date;
 
 /**
  * <p>
- * 说明：
+ * 说明：测试方法
  * <li></li>
  * </p>
  *
- * @author o_0sky
+ * @author dong
  * @date 2019/8/2 10:31
  */
 public class FruitTest {

@@ -31,13 +31,13 @@ public class annotationAopTest {
      * @return
      * @throws Throwable
      */
-    @Around(value = "pointcut()")
-    public Object around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable{
-        Object[] object = proceedingJoinPoint.getArgs();
+    /*@Around(value = "pointcut()")
+    public void around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable{
+        *//*Object[] object = proceedingJoinPoint.getArgs();
         object[0] = 2;
         Object reobject = proceedingJoinPoint.proceed(object);
-        return reobject;
-    }
+        return reobject;*//*
+    }*/
 
     @After(value = "pointcut()")
     public void after(JoinPoint joinPoint){

@@ -6,9 +6,11 @@ import org.w3c.dom.html.HTMLParagraphElement;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.UUID;
 
 
 @ComponentScan
@@ -25,6 +27,16 @@ public class myFilter implements Filter {
         //打印http请求相关信息
         HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
         System.out.println(httpServletRequest.toString());
+        System.out.println("这是cookies："+httpServletRequest.getCookies());
+        Cookie[] cookies = httpServletRequest.getCookies();
+        for (int i = 0;i<cookies.length;i++){
+            System.out.println("cookies的值为:"+cookies[i].getValue());
+            //System.out.println("tooken为："+cookies[i]);
+        }
+        System.out.println("这是个session："+httpServletRequest.getSession());
+        UUID token = UUID.randomUUID();
+        httpServletRequest.getSession().setAttribute("token",token);
+        System.out.println("设置好的token是："+token);
         System.out.println(httpServletRequest.getHeader("Accept"));
         System.out.println(httpServletRequest.getHeader("Referer"));
         System.out.println(httpServletRequest.getHeader("Host"));
