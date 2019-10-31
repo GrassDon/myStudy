@@ -1,4 +1,4 @@
-package com.JAVA;
+package com.JAVA.Reflection;
 
 /**
  * <p>
@@ -11,7 +11,7 @@ package com.JAVA;
  */
 public class ReflectionTest {
     public static void main(String[] args){
-        //Reflection reflection = new Reflection();
-        
+        Reflection reflection = new Reflection();
+        System.out.println(reflection.getClass());
     }
 }

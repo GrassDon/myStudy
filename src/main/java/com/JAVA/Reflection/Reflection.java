@@ -1,4 +1,4 @@
-package com.JAVA;
+package com.JAVA.Reflection;
 
 /**
  * <p>
