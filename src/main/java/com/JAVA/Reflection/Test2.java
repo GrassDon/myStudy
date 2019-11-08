@@ -1,4 +1,4 @@
-package com.JAVA;
+package com.JAVA.Reflection;
 
 import com.JAVA.Entity.Apple;
 import java.lang.reflect.Method;
