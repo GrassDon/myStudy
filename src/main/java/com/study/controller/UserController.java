@@ -1,13 +1,9 @@
 package com.study.controller;
 
-import com.sun.deploy.net.protocol.ProtocolType;
-import org.apache.catalina.authenticator.SpnegoAuthenticator;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
-import org.springframework.context.annotation.Scope;
-import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
