@@ -19,11 +19,11 @@ public class Test {
 
         new Thread(()->{
             spinLock.lock();
-            System.out.println(Thread.currentThread().getName()+"\t开始模拟5s业务处理");
+            System.out.println(Thread.currentThread().getName()+"\t开始模拟0.5s业务处理");
             try {
                 Thread.sleep(500);
                 //TimeUnit.SECONDS.sleep(1);
-                System.out.println(Thread.currentThread().getName()+"\t模拟5s业务处理完毕");
+                System.out.println(Thread.currentThread().getName()+"\t模拟0.5s业务处理完毕");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -32,10 +32,10 @@ public class Test {
 
         new Thread(()->{
             spinLock.lock();
-            System.out.println(Thread.currentThread().getName()+"\t开始模拟5s业务处理");
+            System.out.println(Thread.currentThread().getName()+"\t开始模拟3s业务处理");
             try {
                 TimeUnit.SECONDS.sleep(3);
-                System.out.println(Thread.currentThread().getName()+"\t模拟5s业务处理完毕");
+                System.out.println(Thread.currentThread().getName()+"\t模拟3s业务处理完毕");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

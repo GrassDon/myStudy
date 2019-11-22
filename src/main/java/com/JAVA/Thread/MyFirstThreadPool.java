@@ -1,9 +1,6 @@
 package com.JAVA.Thread;
 
 import net.sf.ehcache.util.NamedThreadFactory;
-import org.springframework.jdbc.core.namedparam.NamedParameterJdbcDaoSupport;
-
-import javax.naming.Name;
 import java.util.concurrent.*;
 
 /**
