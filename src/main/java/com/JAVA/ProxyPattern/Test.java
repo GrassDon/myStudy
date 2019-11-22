@@ -5,7 +5,6 @@ import com.JAVA.ProxyPattern.StaticProxy.ISubject;
 import com.JAVA.ProxyPattern.StaticProxy.ProxySubject;
 import com.JAVA.ProxyPattern.StaticProxy.RealSubject;
 import com.sun.javaws.Main;
-
 import java.lang.reflect.Proxy;
 
 /**
@@ -19,14 +18,14 @@ import java.lang.reflect.Proxy;
  */
 public class Test {
     public static void main (String[] args) {
-        ISubject realSubject = new RealSubject();
-        /*ISubject proxySubject = new ProxySubject(realSubject);
+        /*ISubject realSubject = new RealSubject();
+        *//*ISubject proxySubject = new ProxySubject(realSubject);
         proxySubject.request();
-        proxySubject.response();*/
+        proxySubject.response();*//*
 
         DynamicProxySubject dynamicProxySubject = new DynamicProxySubject(realSubject);
         ISubject proxySubject = (ISubject) Proxy.newProxyInstance(Main.class.getClassLoader(), new Class[]{ISubject.class}, dynamicProxySubject);
         proxySubject.request();
-        proxySubject.response();
+        proxySubject.response();*/
     }
 }
