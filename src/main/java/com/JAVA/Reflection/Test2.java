@@ -1,6 +1,8 @@
 package com.JAVA.Reflection;
 
 import com.JAVA.Entity.Apple;
+
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
@@ -13,13 +15,16 @@ import java.lang.reflect.Method;
  * @date 2019/10/31 15:13
  */
 public class Test2 {
-    public static void main (String[] args) {
+    public static void main (String[] args) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         Apple apple = new Apple("red","33g");
         System.out.println(apple.getClass().getName());
         //获取自己以及父类的方法
         Method[] publicMethods = apple.getClass().getMethods();
         //获取自己的方法
         Method[] allMethods = apple.getClass().getDeclaredMethods();
+
+        Method method1 = apple.getClass().getMethod("setColor", String.class);
+        Method method2 = apple.getClass().getMethod("getColor");
         /**
          * 获取某个类的指定方法，应为方法方法有重载且参数有很多，
          * 所以第二个参数后开始会有很多。对应方法的参数类型。
@@ -36,5 +41,10 @@ public class Test2 {
         for (Method method : allMethods){
             System.out.println(method.getName());
         }
+        System.out.println(method1.getName());
+        System.out.println(method2.getName());
+
+        System.out.println(method1.invoke(apple,"green"));
+        System.out.println(method2.invoke(apple));
     }
 }
