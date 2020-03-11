@@ -4,7 +4,6 @@ import com.JAVA.ProxyPattern.DynamicProxy.DynamicProxySubject;
 import com.JAVA.ProxyPattern.StaticProxy.ISubject;
 import com.JAVA.ProxyPattern.StaticProxy.ProxySubject;
 import com.JAVA.ProxyPattern.StaticProxy.RealSubject;
-import com.sun.javaws.Main;
 import java.lang.reflect.Proxy;
 
 /**
