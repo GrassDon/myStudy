@@ -8,4 +8,9 @@
         <property name="sex" value="male"></property>
     </bean>
 
+    <bean id="person2" class="com.study.Person">
+        <property name="name" value="lin"></property>
+        <property name="sex" value="female"></property>
+    </bean>
+
 </beans>
