@@ -1,9 +1,11 @@
 package com.study;
 
+import com.study.Beans.PersonConfig;
 import com.sun.org.apache.xerces.internal.dom.PSVIAttrNSImpl;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
@@ -41,9 +43,13 @@ public class Test {
         System.out.println(new String(bytes));*/
 
         //这一行代码主要包括了BeanDefinition的注册，默认/自定义标签的解析与注册，bean的加载
-        BeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource("Person.xml"));
+        //BeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource("Person.xml"));
         //bean的创建及获取
-        Person person = (Person) beanFactory.getBean("person");
+        //Person person = (Person) beanFactory.getBean("person");
+
+        //注解形式
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(PersonConfig.class);
+        Person person = (Person)context.getBean("person");
         System.out.println(person.getName());
     }
 }

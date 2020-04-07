@@ -46,8 +46,9 @@ public class Test {
         map1.put("dong","linxy");
         System.out.println(map1.get("dong"));
 
-        StringRedisTemplate template = new StringRedisTemplate();
-        template.opsForValue().set("name","shen");
-        System.out.println(template.opsForValue().get("name"));
+        String s1 = "lin";
+        String s2 = "lin";
+        System.out.println(s1.hashCode());
+        System.out.println(s2.hashCode());
     }
 }

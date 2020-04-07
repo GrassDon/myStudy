@@ -1,5 +1,7 @@
 package com.study;
 
+import org.springframework.beans.factory.InitializingBean;
+
 /**
  * <p>
  * 说明：
@@ -9,7 +11,7 @@ package com.study;
  * @author dongzzh
  * @date 2020/2/27 16:40
  */
-public class Person {
+public class Person implements InitializingBean {
     private String name;
     private String sex;
 
@@ -18,6 +20,10 @@ public class Person {
         this.sex = sex;
     }
     public Person () {
+    }
+
+    public void initPerson(){
+        System.out.println("初始化方法");
     }
 
     public String getName () {
@@ -42,5 +48,10 @@ public class Person {
                 "name='" + name + '\'' +
                 ", sex='" + sex + '\'' +
                 '}';
+    }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("afterpropertiesset方法");
     }
 }
