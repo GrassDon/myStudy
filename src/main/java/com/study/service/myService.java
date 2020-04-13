@@ -13,4 +13,8 @@ public class myService {
     public void deleteUser(int id){
         System.out.println("deleteuser");
     }
+
+    public void play(){
+        System.out.println("通过上下文获取service层bean示例");
+    }
 }

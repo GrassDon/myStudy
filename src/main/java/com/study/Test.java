@@ -1,6 +1,8 @@
 package com.study;
 
 import com.study.Beans.PersonConfig;
+import com.study.service.bookService;
+import com.study.service.myService;
 import com.sun.org.apache.xerces.internal.dom.PSVIAttrNSImpl;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
@@ -48,8 +50,13 @@ public class Test {
         //Person person = (Person) beanFactory.getBean("person");
 
         //注解形式
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(PersonConfig.class);
+        /*AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(PersonConfig.class);
         Person person = (Person)context.getBean("person");
-        System.out.println(person.getName());
+        System.out.println(person.getName());*/
+
+        //注解形式获取service
+        AnnotationConfigApplicationContext serviceContext = new AnnotationConfigApplicationContext(myService.class);
+        myService myService = (myService)serviceContext.getBean("myService");
+        myService.play();
     }
 }
