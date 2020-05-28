@@ -55,7 +55,7 @@ public class Test {
         System.out.println(person.getName());*/
 
         //注解形式获取service
-        AnnotationConfigApplicationContext serviceContext = new AnnotationConfigApplicationContext(myService.class);
+        AnnotationConfigApplicationContext serviceContext = new AnnotationConfigApplicationContext("com.study.DAO");
         myService myService = (myService)serviceContext.getBean("myService");
         myService.play();
     }
