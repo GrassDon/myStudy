@@ -18,5 +18,17 @@ public class FruitTest {
         Apple apple = new Apple(23,"red");
         AppleInterface appleInterface = new IAppleInterface();
         appleInterface.information(apple);
+        int j=3;
+        for(int i=0;i<10;i++){
+            if(j==i){
+                System.out.println(i);
+            }
+            else if(i==4){
+                System.out.println(4);
+            }
+            else if(1==1){
+                System.out.println("true");
+            }
+        }
     }
 }

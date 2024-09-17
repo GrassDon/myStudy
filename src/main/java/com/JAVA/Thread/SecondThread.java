@@ -1,6 +1,5 @@
 package com.JAVA.Thread;
 
-import jdk.internal.dynalink.beans.StaticClass;
 
 /**
  * <p>

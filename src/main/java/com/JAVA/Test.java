@@ -1,6 +1,8 @@
 package com.JAVA;
 
 import com.sun.javafx.collections.MappingChange;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.jdbc.object.MappingSqlQuery;
 
 import javax.lang.model.element.NestingKind;
@@ -43,5 +45,10 @@ public class Test {
         map1.put("dong","dongzzh");
         map1.put("dong","linxy");
         System.out.println(map1.get("dong"));
+
+        String s1 = "lin";
+        String s2 = "lin";
+        System.out.println(s1.hashCode());
+        System.out.println(s2.hashCode());
     }
 }

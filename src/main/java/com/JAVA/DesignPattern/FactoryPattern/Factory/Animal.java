@@ -1,0 +1,14 @@
+package com.JAVA.DesignPattern.FactoryPattern.Factory;
+
+/**
+ * <p>
+ * 说明：工厂模式动物接口
+ * <li></li>
+ * </p>
+ *
+ * @author dongzzh
+ * @date 2020/3/5 9:51
+ */
+public interface Animal {
+    void eat();
+}
